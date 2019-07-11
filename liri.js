@@ -59,8 +59,9 @@ function runSearch() {
         };
 
         //bands in town api request
+        var artistInput = (process.argv.slice(2).join("+"), userRes.search);
         const getArtistEvent = async function () {
-            var queryConcert = "https://rest.bandsintown.com/artists/" + searchInput + "/events?app_id=codingbootcamp";
+            var queryConcert= "https://rest.bandsintown.com/artists/" + artistInput + "/events?app_id=codingbootcamp";
             try {
                 const bandResponse = await axios.get(queryConcert);
                 console.log("Venue: " + bandResponse.data[0].venue.name);
@@ -72,13 +73,13 @@ function runSearch() {
         };
 
         if (userRes.action === 'movie-this') {
-            console.log(`Movie Details`);
+            console.log(`Movie Details:`);
             getMovieInfo();
         } else if (userRes.action === 'spotify-this-song') {
-            console.log(`Song Details`)
+            console.log(`Song Details:`)
             getSong();
         } else if (userRes.action === 'concert-this') {
-            console.log(`Concert Details`)
+            console.log(`Concert Details:`)
             getArtistEvent();
         }
 
