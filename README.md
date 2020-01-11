@@ -12,7 +12,7 @@
 <img src="images/liri3.png" width="325">
 
 ### Getting Started
-Fork/clone this repo Run npm install for the node_modules in your favorite code editor. Run with node.js.
+Click the link above to view video demo.
 
 ### Author
 _Shantell Davis_
